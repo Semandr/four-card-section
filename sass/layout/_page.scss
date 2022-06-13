@@ -1,0 +1,120 @@
+.header {
+  max-width: 50rem;
+  text-align: center;
+  &__intro {
+    font-weight: 400;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.cards {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.7rem;
+    grid-template-areas:
+      'supervisor team calc'
+      'supervisor karma calc';
+    place-items: center;
+  }
+}
+.card {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 3rem;
+    max-width: 34rem;
+    max-height: 24.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 1rem 2rem 0 var(--clr-grayish-blue);
+
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.3rem;
+      top: 0;
+      left: 0;
+    }
+    &_tile {
+      grid-area: supervisor;
+      &::before {
+        background-color: var(--clr-cyan);
+      }
+    }
+
+    &_red {
+      grid-area: team;
+      &::before {
+        background-color: var(--clr-red);
+      }
+    }
+
+    &_orange {
+      grid-area: karma;
+      &::before {
+        background-color: var(--clr-orange);
+      }
+    }
+
+    &_blue {
+      grid-area: calc;
+      &::before {
+        background-color: var(--clr-blue);
+      }
+    }
+    &__text {
+    }
+  }
+
+  &__image {
+    width: 6.5rem;
+    align-self: flex-end;
+  }
+}
+@media screen and (max-width: 90rem) {
+  .cards {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.7rem;
+      grid-template-areas:
+        'supervisor team'
+        'karma calc';
+      place-items: center;
+    }
+  }
+}
+@media screen and (max-width: 55rem) {
+  .cards {
+    &__list {
+      margin-top: -1rem;
+      margin-bottom: 5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-columns: auto;
+      gap: 2.7rem;
+      grid-template-areas:
+        'supervisor'
+        'team'
+        'karma'
+        'calc';
+      place-items: center;
+    }
+  }
+}
