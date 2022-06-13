@@ -19,12 +19,62 @@
     <title>Frontend Mentor | Four card feature section</title>
   </head>
   <body>
-    Reliable, efficient delivery Powered by Technology Our Artificial
-    Intelligence powered tools use millions of project data points to ensure
-    that your project is successful Supervisor Monitors activity to identify
-    project roadblocks Team Builder Scans our talent network to create the
-    optimal team for your project Karma Regularly evaluates our talent to ensure
-    quality Calculator Uses data from past projects to provide better delivery
-    estimates
+    <div class="_container">
+      <header class="header">
+        <h1 class="title title__primary">
+          <span class="title__item title__primary_thin">
+            Reliable, efficient delivery
+          </span>
+          <span class="title__item">Powered by Technology</span>
+        </h1>
+        <p class="header__intro paragraph paragraph__header">
+          Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </header>
+      <main class="main"></main>
+      <ul class="cards cards__list">
+        <li class="card__item card__item_tile">
+          <h2 class="title title__secondary">Supervisor</h2>
+          <p class="paragraph paragraph__card">
+            Monitors activity to identify project roadblocks
+          </p>
+          <img
+            class="card__image"
+            src="./images/icon-supervisor.svg"
+            alt="icon"
+          />
+        </li>
+        <li class="card__item card__item_red">
+          <h2 class="title title__secondary">Team Builder</h2>
+          <p class="paragraph paragraph__card">
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img
+            class="card__image"
+            src="./images/icon-team-builder.svg"
+            alt="icon"
+          />
+        </li>
+        <li class="card__item card__item_orange">
+          <h2 class="title title__secondary">Karma</h2>
+          <p class="paragraph paragraph__card">
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <img class="card__image" src="./images/icon-karma.svg" alt="icon" />
+        </li>
+        <li class="card__item card__item_blue">
+          <h2 class="title title__secondary">Calculator</h2>
+          <p class="paragraph paragraph__card">
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img
+            class="card__image"
+            src="./images/icon-calculator.svg"
+            alt="icon"
+          />
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
